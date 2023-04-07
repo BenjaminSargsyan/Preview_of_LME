@@ -1,3 +1,5 @@
+# Diffuse Large B cell lymphoma Microenvironment classification
+
 ## Introduction
 
 Diffuse  large  B-cell  lymphoma  (DLBCL)  is  a  biologically  and  clinically  heterogene- ous  disease.  Transcriptomic  and  genetic  characterization  of  DLBCL  has  increased  the  understanding  of  its  intrinsic  pathogenesis  and  provided  potential  therapeutic  targets. Besides the classification of the DLBCL the Lymphoma Microenvironment (LME) classification also plays a critical role in further clinical outcomes and response to the therapies. Current repository gives an opportunity to analyze LME and understand which LME subtype it belongs to. Analysis are based on the ssGSEA scores of the 25 Functional Gene expression signatures where each of them correspond to a specific cell type or biological process.
@@ -37,7 +39,7 @@ git clone https://github.com/BostonGene/LME
 Note: Please be aware that the analyses are developed only for DLBCL type of lymphomas.
 To have a better understating of how the analysis work below you can see the corresponding scheme of the flow:
 
-
+![LME classification flowchart](https://user-images.githubusercontent.com/127855909/230636947-bac5b972-e485-4be0-9330-67b058613d5d.jpg)
 
 All of the analyses are contained in LME_Classification.ipynb notebook. Overall notebook is divided into separate sections each of having their own subsections. Below you can see the main navigation and functionality of the analyses flow:
 

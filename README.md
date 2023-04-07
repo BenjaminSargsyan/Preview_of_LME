@@ -41,7 +41,7 @@ To have a better understating of how the analysis work below you can see the cor
 
 ![LME classification flowchart](https://user-images.githubusercontent.com/127855909/230636947-bac5b972-e485-4be0-9330-67b058613d5d.jpg)
 
-All of the analyses are contained in LME_Classification.ipynb notebook. Overall notebook is divided into separate sections each of having their own subsections. Below you can see the main navigation and functionality of the analyses flow:
+All of the analyses are contained in [LME_Classification](LME_Classification.ipynb) notebook. Overall notebook is divided into separate sections each of having their own subsections. Below you can see the main navigation and functionality of the analyses flow:
 
 
 * Data preparation

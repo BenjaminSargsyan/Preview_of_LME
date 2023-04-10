@@ -9,7 +9,7 @@ Each of the classified subtypes has its unique group of FGES which is presented 
 
 In BostonGene, we developed a way to create samples Molecular Functional Portrait which is a planetary schematic representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts LME subtype, and the activity of tumor promoting and suppressing processes. The portrait includes qualitative and quantitative descriptions of modules built based on the expression of BostonGene curated 25 Fges as it was mentioned earlier (reference manuscript and table), with the size of each module corresponding to the intensity of the normalized single-sample gene set enrichment analysis (ssGSEA) score, and the colors denoting pro- (red) or anti- (blue) cancer activity .A short introduction to each LME subtype with its MFP portrait and overall survival predictions you can see on figure below.
 
-
+![image](https://user-images.githubusercontent.com/127855909/230941931-c1ab7abf-d5df-44f8-9307-2b4cf7bb81af.png)
 
 ## Citation
 This repository and all of its content are linked to “Clinical and Biological Subtypes of B-cell Lymphoma Revealed by Microenvironmental Signatures” article. For the article look in the link below:

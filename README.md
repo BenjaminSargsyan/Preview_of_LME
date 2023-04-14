@@ -28,7 +28,7 @@ Copy the command below to clone our repository into your environment
 git clone https://github.com/BostonGene/LME
 
 ## Implementation overview
-**Note: Please be aware that the analyses are developed only for DLBCL type of lymphomas and the input expression matrix data must be RNA-Seq otherwise the analysis won't work properly.**
+**Note: Please be aware that the analyses are developed only for DLBCL type of lymphomas and the input expression matrix data must be RNA-Seq type otherwise the analysis won't work properly.**
 
 To have a better understating of how the analysis work below you can see the corresponding scheme of the flow:
 

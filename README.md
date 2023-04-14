@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Diffuse  large  B-cell  lymphoma  (DLBCL)  is  a  biologically  and  clinically  heterogene- ous  disease.  Transcriptomic  and  genetic  characterization  of  DLBCL  has  increased  the  understanding  of  its  intrinsic  pathogenesis  and  provided  potential  therapeutic  targets. Besides the classification of the DLBCL the Lymphoma Microenvironment (LME) classification also plays a critical role in further clinical outcomes and response to the therapies. Current repository gives an opportunity to analyze LME and understand which LME subtype it belongs to. Analysis are based on the ssGSEA scores of the 25 Functional Gene expression signatures where each of them correspond to a specific cell type or biological process.
+Diffuse  large  B-cell  lymphoma  (DLBCL)  is  a  biologically  and  clinically  heterogene- ous  disease.  Transcriptomic  and  genetic  characterization  of  DLBCL  has  increased  the  understanding  of  its  intrinsic  pathogenesis  and  provided  potential  therapeutic  targets. Besides the classification of the DLBCL the Lymphoma Microenvironment (LME) classification also plays a critical role in further clinical outcomes and response to the therapies. Current repository gives an opportunity to analyze the  and understand which LME subtype it belongs to. Analysis are based on the ssGSEA scores of the 25 Functional Gene expression signatures where each of them correspond to a specific cell type or biological process.
 Each of the classified subtypes has its unique group of FGES which is presented on the figure below.
 
 ![LME classification related materials (2)](https://user-images.githubusercontent.com/127855909/230941453-041a44b2-b068-4000-ba78-eb3e20accce1.jpg)
@@ -28,10 +28,12 @@ Copy the command below to clone our repository into your environment
 git clone https://github.com/BostonGene/LME
 
 ## Implementation overview
-Note: Please be aware that the analyses are developed only for DLBCL type of lymphomas.
+**Note: Please be aware that the analyses are developed only for DLBCL type of lymphomas and the input expression matrix data must be RNA-Seq otherwise the analysis won't work properly.**
+
 To have a better understating of how the analysis work below you can see the corresponding scheme of the flow:
 
 ![LME classification flowchart](https://user-images.githubusercontent.com/127855909/230636947-bac5b972-e485-4be0-9330-67b058613d5d.jpg)
+
 
 All of the analyses are contained in [LME_Classification](LME_Classification.ipynb) notebook. Overall notebook is divided into separate sections each of having their own subsections. Below you can see the main navigation and functionality of the analyses flow:
 
@@ -53,4 +55,4 @@ All of the analyses are contained in [LME_Classification](LME_Classification.ipy
   * Classifying the example cohort
   
   
-**Notice that all of the steps are essential and you can’t skip any of them.
+**Notice that all of the steps are essential and you can’t skip any of them.**

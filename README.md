@@ -2,57 +2,60 @@
 
 ## Introduction
 
-Diffuse  large  B-cell  lymphoma  (DLBCL)  is  a  biologically  and  clinically  heterogene- ous  disease.  Transcriptomic  and  genetic  characterization  of  DLBCL  has  increased  the  understanding  of  its  intrinsic  pathogenesis  and  provided  potential  therapeutic  targets. Besides the classification of the DLBCL the Lymphoma Microenvironment (LME) classification also plays a critical role in further clinical outcomes and response to the therapies. Current repository gives an opportunity to analyze the  and understand which LME subtype it belongs to. Analysis are based on the ssGSEA scores of the 25 Functional Gene expression signatures where each of them correspond to a specific cell type or biological process.
-Each of the classified subtypes has its unique group of FGES which is presented on the figure below.
+Diffuse large B-cell lymphoma (DLBCL) is a biologically and clinically heterogeneous disease. Transcriptomic and genetic characterization of DLBCL has increased the understanding of its intrinsic pathogenesis and provided potential therapeutic targets. Besides the classification of the DLBCL, the Lymphoma Microenvironment (LME) classification also plays a critical role in patient clinical outcomes and response to antineoplastic therapies. The current repository gives an opportunity to analyze the gene expression data and understand which LME subtype it belongs to. The analysis is based on the ssGSEA scores of the 25 functional gene expression signatures, each of them corresponding to a specific cell type or biological process. Each LME subtype is characterized by a unique set of FGES, shown in Fig. 1.
 
-![LME classification related materials (2)](https://user-images.githubusercontent.com/127855909/230941453-041a44b2-b068-4000-ba78-eb3e20accce1.jpg)
+![Table](https://github.com/BenjaminSargsyan/Preview_of_LME/assets/127855909/a0799528-5aa2-48f1-bd84-580b214da1fa)
 
-In BostonGene, we developed a way to create samples Molecular Functional Portrait which is a planetary schematic representation of integrated molecular and functional characteristics of a tumor and its microenvironment that depicts LME subtype, and the activity of tumor promoting and suppressing processes. The portrait includes qualitative and quantitative descriptions of modules built based on the expression of BostonGene curated 25 Fges as it was mentioned earlier (reference manuscript and table), with the size of each module corresponding to the intensity of the normalized single-sample gene set enrichment analysis (ssGSEA) score, and the colors denoting pro- (red) or anti- (blue) cancer activity .A short introduction to each LME subtype with its MFP portrait and overall survival predictions you can see on figure below.
+
+<p align="center">Fig. 1. LME subtypes with their definitive functional gene expression signatures</p>
+
+<p align="center">A brief description of each LME type and its graphical interpretation are provided in Fig. 2.</p>
 
 ![image](https://user-images.githubusercontent.com/127855909/230941931-c1ab7abf-d5df-44f8-9307-2b4cf7bb81af.png)
 
+<p align="center">Fig. 2. LME subtypes and their brief descriptions</p>
+
+
 ## Citation
-This repository and all of its content are linked to “Clinical and Biological Subtypes of B-cell Lymphoma Revealed by Microenvironmental Signatures” article. For the article look in the link below:
+If software, data, and/or website are used in your publication, please cite [Kotlov N et al. Clinical and Biological Subtypes of B-cell Lymphoma Revealed by Microenvironmental Signatures. Cancer Discov. 2021;11(6):1468–1489](https://aacrjournals.org/cancerdiscovery/article/11/6/1468/666622/Clinical-and-Biological-Subtypes-of-B-cell) and make a reference to this repository.
 
 
-https://www.cell.com/cancer-cell/fulltext/S1535-6108(21)00222-1
+For more information visit [BostonGene's scientific portal.](https://science.bostongene.com/tumor-portrait/)
 
-
-
-For more information visit to BostonGene’s scientific portal using the following link:  https://science.bostongene.com/tumor-portrait/ 
-Please, when using the provided materials for research and publication make a reference to this repository and the article.
 
 ## Setup
-If your environment is already set up according to the requirements in the description of Setup.md file, you only just have to clone the github repository and start your analysis.
-Copy the command below to clone our repository into your environment 
-git clone https://github.com/BostonGene/LME
+Set up your environment according to the requirements in the description of the Setup.md file in the repository.
+If your environment is already set up accordingly, clone the Github repository to start your analysis:
+    git clone https://github.com/BostonGene/LME
 
 ## Implementation overview
-**Note: Please be aware that the analysis are developed only for DLBCL type of lymphomas and the input expression matrix data must be RNA-Seq type otherwise the analysis won't work properly.**
+**Note: The analysis was developed for DLBCL only**
 
-To have a better understating of how the analysis work below you can see the corresponding scheme of the flow:
+The analysis workflow is presented in the diagram below, highlighting the main steps and logical elements of the notebook.
 
-![LME classification flowchart](https://user-images.githubusercontent.com/127855909/230636947-bac5b972-e485-4be0-9330-67b058613d5d.jpg)
+![Scheme](https://github.com/BenjaminSargsyan/Preview_of_LME/assets/127855909/83bf38a5-c55f-420e-b6df-153e21144a1e)
 
+**Note: Only RNA-Seq data can be used as input data for the analysis.**
 
-All of the analyses are contained in [LME_Classification](LME_Classification.ipynb) notebook. Overall notebook is divided into separate sections each of having their own subsections. Below you can see the main navigation and functionality of the analyses flow:
+All the analyses are performed in the [LME_Classification.ipynb](LME_Classification.ipynb) notebook. The notebook is divided into three separate sections with several subsections within them. Below you can see the main navigation and functionality of the analysis flow:
+
 
 
 * Data preparation
-  * Loading gene signatures
-  * Loading reference cohort annotation file
-  * Loading the reference cohort
-* Confirming that reference cohort does not have any batch effects
-  * Creating a KNN model based on the reference cohort
-* Preparation and QC of gene expression matrix
-  * Read the gene expression matrix
-  * Quality check for the example data
+  * Load the reference cohort
+  * Check the reference cohort for batch effects
+  * Load gene signatures
+* Gene expression matrix preparation and QC
+  * Read example data gene expression
+  * Check the quality of the example data
     * Batch effect detection
+    * Batch effect detection by PCA
     * Outlier detection
     * Data distribution check
-* Classification of the gene expression data
-  * Calculating ssGSEA and PROGENy scores of signatures
-  * Classifying the example cohort
+* Classification of SAMPLE_EXPRESSION
+  * Create a KNN model based on the reference cohort
+  * Calculate ssGSEA and PROGENy scores of signatures
+  * Classify the example cohort
   
   
-**Notice that all of the steps are essential and you can’t skip any of them.**
+***Note: All of the listed steps are essential. Do not skip any of them.***

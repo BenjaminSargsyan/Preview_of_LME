@@ -1,4 +1,4 @@
-# Diffuse Large B cell lymphoma Microenvironment classification
+# Biological Subtypes of B-cell Lymphoma Revealed by Microenvironmental Signatures.
 
 ## Introduction
 
